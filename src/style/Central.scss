@@ -20,4 +20,9 @@ html, body {
   width: 800px;
 }
 
+@font-face {
+  font-family: 'Unifrank';
+  src: url(../static/UnifrakturCook-Bold.ttf)
+}
+
 @import './ComponentsHeaderRow.scss'

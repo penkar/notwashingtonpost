@@ -19,6 +19,12 @@ module.exports = {
         "sass-loader"
       ]
     },{
+      test:/\.ttf/,
+      exclude: /(node_modules|bower_components)/,
+      use: {
+        loader: 'url-loader'
+      }
+    },{
       test: /\.html$/,
       exclude: /(node_modules|bower_components)/,
       use: {
