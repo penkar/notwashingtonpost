@@ -4,22 +4,26 @@ import { bindActionCreators } from 'redux';
 
 import {HeaderRow, } from '../Components/'
 import {Slogan, RecentStories} from '../Components/Functional'
+import {changeSetting, changeSettingBool} from '../Actions/'
 
 const mapActions = (dispatch) =>({
   dispatch,
   actions: {
-    changeSetting: bindActionCreators(bindActionCreators),
-  }
+    changeSetting: bindActionCreators(changeSetting, dispatch),
+    changeSettingBool: bindActionCreators(changeSettingBool, dispatch),
+  },
 })
 
 class App extends React.Component {
   render() {
+    let {actions} = this.props;
+    console.log(this.props)
     return (
       <div >
-        <HeaderRow />
+        <HeaderRow actions={actions} />
         <div className='app-body'>
           { Slogan() }
-          { RecentStories(this.props.stories) }
+          { RecentStories(this.props.newsReducer.stories) }
         </div>
       </div>
     )

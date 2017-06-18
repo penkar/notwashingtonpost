@@ -21,14 +21,22 @@ class HeaderRow extends React.Component {
     return (
       <div id='header-row'>
         <ul className='news-link-ul' key='0'>
+
           <HeaderButton title={''} link={''}>
             <Search className='standard-icon' />
           </HeaderButton>
-          <HeaderButton title={''} link={''}>
+
+          <HeaderButton
+            title={''}
+            link={''}
+            clickValue='section'
+            onClick={this.props.actions.changeSettingBool}>
             <span>Sections&nbsp;</span>
             <Bars className='standard-icon' />
           </HeaderButton>
+
           { Links.map((link, i) => (<HeaderLink {...link} key={i} />))}
+
         </ul>
 
         <ul className='news-link-ul' key='1'>
@@ -39,6 +47,10 @@ class HeaderRow extends React.Component {
       </div>
     )
   }
+}
+
+HeaderRow.defaultProps = {
+  actions: {},
 }
 
 export default HeaderRow

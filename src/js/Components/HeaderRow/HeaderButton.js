@@ -3,17 +3,31 @@ import cn from 'classnames'
 
 class HeaderButton extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
+    this._click = this._click.bind(this);
   }
 
   render() {
     return (
-      <div className={cn('news-button', {})}>
+      <div
+        onClick={this._click}
+        className={cn('news-button', {})}>
         { this.props.title }
         { this.props.children }
       </div>
     )
   }
+
+  _click() {
+    this.props.onClick(this.props.clickValue);
+  }
+}
+
+HeaderButton.defaultProps = {
+  title:'',
+  link:'',
+  clickValue:'',
+  onClick:()=>(null),
 }
 
 export default HeaderButton;
