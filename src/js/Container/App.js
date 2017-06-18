@@ -1,6 +1,16 @@
 import React from 'react'
+import {connect} from 'react-redux'
+import { bindActionCreators } from 'redux';
+
 import {HeaderRow, } from '../Components/'
-import {Slogan, } from '../Components/Functional'
+import {Slogan, RecentStories} from '../Components/Functional'
+
+const mapActions = (dispatch) =>({
+  dispatch,
+  actions: {
+    changeSetting: bindActionCreators(bindActionCreators),
+  }
+})
 
 class App extends React.Component {
   render() {
@@ -8,12 +18,17 @@ class App extends React.Component {
       <div >
         <HeaderRow />
         <div className='app-body'>
-
           { Slogan() }
+          { RecentStories(this.props.stories) }
         </div>
       </div>
     )
   }
 }
 
-export default App
+App.defaultProps = {
+  stories:[],
+}
+
+
+export default connect(state => state, mapActions)(App)

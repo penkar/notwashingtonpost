@@ -21,7 +21,7 @@ const Slogan = () => {
           Edition: <a style={{color:'black'}} href='#'>Web</a>
         </span>
       </div>
-      <hr className='divider'/>
+      <hr className='medium-divider'/>
     </div>
   )
 }

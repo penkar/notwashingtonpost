@@ -20,9 +20,16 @@ html, body {
   display: flex;
 }
 
-hr.divider {
-  border: solid 1.5px black;
+hr {
+  &.medium-divider {
+    border: solid 1.5px black;
+  }
+
+  &.thin-divider {
+    border: solid 1.5px black;
+  }
 }
+
 
 .app-body {
   position: absolute;
@@ -45,3 +52,4 @@ hr.divider {
 
 @import './ComponentsHeaderRow.scss';
 @import './SloganSectional.scss';
+@import './RecentStories.scss';
