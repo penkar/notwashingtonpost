@@ -29,7 +29,7 @@ class HeaderRow extends React.Component {
           <HeaderButton
             title={''}
             link={''}
-            clickValue='section'
+            clickValue='tableofcontents'
             onClick={this.props.actions.changeSettingBool}>
             <span>Sections&nbsp;</span>
             <Bars className='standard-icon' />

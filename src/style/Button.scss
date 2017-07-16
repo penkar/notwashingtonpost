@@ -1,0 +1,19 @@
+.generic-button-component {
+  border-radius: 4px;
+  text-align: center;
+
+  &.full {
+    width: calc(100% - 80px);
+    padding: 8px 20px;
+    margin: 8px 20px;
+  }
+
+  &.primary {
+    color: white;
+    background-color: #1955a5;
+
+    &:hover {
+      background-color: #3d73d5
+    }
+  }
+}

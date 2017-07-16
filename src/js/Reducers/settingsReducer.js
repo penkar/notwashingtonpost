@@ -1,7 +1,7 @@
 import {CHANGE_SETTING, CHANGE_SETTING_BOOL, } from '../Constants'
 
 const initial = {
-  section: false,
+  tableofcontents: false,
 }
 
 const settingsReducer = (state = initial, action) => {

@@ -12,7 +12,7 @@ html, body {
 
 * {
   transition-timing-function: ease-in;
-  transition: 0.2s;
+  transition: 0.75s;
 }
 
 #app {
@@ -51,5 +51,8 @@ hr {
 }
 
 @import './ComponentsHeaderRow.scss';
+@import './Button.scss';
 @import './SloganSectional.scss';
 @import './RecentStories.scss';
+@import './Page.scss';
+@import './TableOfContents.scss';

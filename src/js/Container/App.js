@@ -1,8 +1,9 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import { bindActionCreators } from 'redux';
+import cn from 'classnames'
 
-import {HeaderRow, } from '../Components/'
+import {HeaderRow, TableOfContents} from '../Components/'
 import {Slogan, RecentStories} from '../Components/Functional'
 import {changeSetting, changeSettingBool} from '../Actions/'
 
@@ -16,12 +17,12 @@ const mapActions = (dispatch) =>({
 
 class App extends React.Component {
   render() {
-    let {actions} = this.props;
-    console.log(this.props)
+    let {actions, settingsReducer} = this.props;
     return (
-      <div >
+      <div>
         <HeaderRow actions={actions} />
-        <div className='app-body'>
+        { TableOfContents(settingsReducer.tableofcontents) }
+        <div className={cn('app-body', {tableofcontents:settingsReducer.tableofcontents})}>
           { Slogan() }
           { RecentStories(this.props.newsReducer.stories) }
         </div>
