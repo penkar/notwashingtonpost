@@ -1,11 +1,12 @@
 .generic-button-component {
   border-radius: 4px;
   text-align: center;
+  padding: 8px 4px;
+  margin: 8px 4px;
+  font-size: small;
 
   &.full {
     width: calc(100% - 80px);
-    padding: 8px 20px;
-    margin: 8px 20px;
   }
 
   &.primary {
