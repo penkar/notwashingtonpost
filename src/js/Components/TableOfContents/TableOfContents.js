@@ -8,11 +8,13 @@ import {List, MultiLink, } from './SectionList.js'
 
 const TableOfContents = (open) => {
   return (
-    <div className={cn({open},'table-of-contents-component')}>
+    <div id='TableOfContents' className={cn({open},'table-of-contents-component')}>
       <Button label='Subscribe' class='content-component-button' type='primary' />
       <hr className='divider' />
       { MultiContent(MultiLink[0]) }
       { List.map((section) => (Content(section))) }
+      <hr className='full-break' />
+
     </div>
   );
 }

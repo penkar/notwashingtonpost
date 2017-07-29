@@ -6,7 +6,8 @@
   top: 60px;
   left: -325px;
   width: 325px;
-  height: calc(100% - 60px);
+  height: calc(100vh - 60px);
+  overflow: auto;
 
   background-color: #2a2a2a;
   padding: 12px 0px;
@@ -17,13 +18,19 @@
     left:0px;
   }
 
-  >.divider {
-    width: 323px;
+  >hr {
+    border: solid rgba(255, 255, 255, 0.22) 1px;
+  }
+
+  >hr.divider {
+    width: 259px;
+    margin-left: 53px;
     left:0px;
     color:gray;
     border-top-width: 1px;
     border-bottom-width: 0px;
   }
+
   >.content-component-button {
 
   }
@@ -40,7 +47,7 @@
     align-items: center;
 
     >.label, .right-arrow {
-      font-size: 12px;
+      font-size: 14px;
     }
 
     >.subcontents-component {
@@ -110,13 +117,17 @@
       }
     }
 
-
     .primary {
-      font-size: 14px;
+      font-size: 16px;
     }
 
     .secondary {
       font-size: 10px;
     }
+  }
+
+  hr.full-break {
+    width: 100%;
+    border-bottom: 0px;
   }
 }

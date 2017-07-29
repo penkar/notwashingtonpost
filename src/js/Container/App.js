@@ -16,6 +16,14 @@ const mapActions = (dispatch) =>({
 })
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this._click = this._click.bind(this);
+  }
+  componentDidMount() {
+    document.addEventListener('click', this._click);
+  }
+
   render() {
     let {actions, settingsReducer} = this.props;
     return (
@@ -28,6 +36,15 @@ class App extends React.Component {
         </div>
       </div>
     )
+  }
+
+  _click(e) {
+    let target = e.target;
+    while(target) {
+      if (target.id === 'TableOfContents' || target.id === 'header-row') {break;}
+      target = target.parentElement;
+    }
+    if(!target) this.props.actions.changeSettingBool('tableofcontents');
   }
 }
 
