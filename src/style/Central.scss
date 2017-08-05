@@ -50,9 +50,10 @@ hr {
   src: url(../static/JacquesFrancoisShadow-Regular.ttf)
 }
 
-@import './ComponentsHeaderRow.scss';
 @import './Button.scss';
-@import './SloganSectional.scss';
-@import './RecentStories.scss';
+@import './ComponentsHeaderRow.scss';
 @import './Page.scss';
+@import './RecentStories.scss';
+@import './SloganSectional.scss';
+@import './StoryTeaser.scss';
 @import './TableOfContents.scss';

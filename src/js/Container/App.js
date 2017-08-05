@@ -4,16 +4,19 @@ import { bindActionCreators } from 'redux';
 import cn from 'classnames'
 
 import {HeaderRow, TableOfContents} from '../Components/'
-import {Slogan, RecentStories} from '../Components/Functional'
-import {changeSetting, changeSettingBool} from '../Actions/'
+import {Slogan, RecentStories, StoryTeaser,} from '../Components/Functional'
+import * as actions from '../Actions/'
+import {getStories} from '../Utility';
 
 const mapActions = (dispatch) =>({
   dispatch,
   actions: {
-    changeSetting: bindActionCreators(changeSetting, dispatch),
-    changeSettingBool: bindActionCreators(changeSettingBool, dispatch),
+    changeSetting: bindActionCreators(actions.changeSetting, dispatch),
+    changeSettingBool: bindActionCreators(actions.changeSettingBool, dispatch),
+    setStoryAction: bindActionCreators(actions.setStoryAction, dispatch),
+    setStoryTags: bindActionCreators(actions.setStoryTags, dispatch),
   },
-})
+});
 
 class App extends React.Component {
   constructor(props) {
@@ -22,6 +25,7 @@ class App extends React.Component {
   }
   componentDidMount() {
     document.addEventListener('click', this._click);
+    getStories(this.props.actions);
   }
 
   render() {
@@ -32,19 +36,20 @@ class App extends React.Component {
         { TableOfContents(settingsReducer.tableofcontents) }
         <div className={cn('app-body', {tableofcontents:settingsReducer.tableofcontents})}>
           { Slogan() }
-          { RecentStories(this.props.newsReducer.stories) }
+          { RecentStories(this.props.newsTaglineReducer.stories) }
         </div>
       </div>
     )
   }
 
   _click(e) {
+    if(!this.props.settingsReducer.tableofcontents) return null;
     let target = e.target;
     while(target) {
       if (target.id === 'TableOfContents' || target.id === 'header-row') {break;}
       target = target.parentElement;
     }
-    if(!target) this.props.actions.changeSettingBool('tableofcontents');
+    if(!target) return this.props.actions.changeSettingBool('tableofcontents');
   }
 }
 

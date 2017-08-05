@@ -14,7 +14,7 @@ const TableOfContents = (open) => {
       { MultiContent(MultiLink[0]) }
       { List.map((section) => (Content(section))) }
       <hr className='full-break' />
-
+      
     </div>
   );
 }
