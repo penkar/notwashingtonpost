@@ -22,6 +22,7 @@ class HomePageBody extends React.Component {
   _cols() {
     let {stories} = this.props, arr1 = [], arr2 = [], arr3 = [];
     stories.map((item, i) => {
+      console.log(item);
       let j = i % 3;
       if(!j) {
         arr1.push(StoryTeaser(item, i));

@@ -9,8 +9,8 @@ const StoryElement = ({style, type, text, array, sClass = ''}, i) => {
     case 'author':
       return <span key={i} className={cn('author-story-element', sClass)}>{text}</span>
     case 'list':
-      return (<ul className={cn('list-story-element', eClass)}>
-        {array.map((st)=>(<li className='list-item-story-element'>{st}</li>))}
+      return (<ul className={cn('list-story-element', sClass)}>
+        {array.map((st, j)=>(<li key={j} className='list-item-story-element'>{st}</li>))}
       </ul>);
     default:
       return <span key={i} className={cn('title-story-element', sClass)}>{text}</span>
