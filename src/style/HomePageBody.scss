@@ -1,0 +1,38 @@
+.home-page-body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .home-page-body-col {
+   display: flex;
+   flex-direction: column;
+   flex-grow: 1;
+  }
+
+  .home-page-body-col + .home-page-body-col {
+   border-left: 1px solid rgba(0, 0, 0, 0.33);
+  }
+
+  .story-teaser-component + .story-teaser-component {
+    border-top: 1px solid rgba(0, 0, 0, 0.33);
+  }
+
+  .story-teaser-component {
+    text-align: left;
+    padding: 1rem;
+    
+    .title {
+
+    }
+
+    .author {
+      &:before {content: 'By: '}
+      text-transform: capitalize;
+      font-weight: 800;
+    }
+
+    .date {
+
+    }
+  }
+}

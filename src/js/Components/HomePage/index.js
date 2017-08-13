@@ -1,3 +1,2 @@
-import StoryTeaser from './StoryTeaser'
-
-export {StoryTeaser}
+export * from './StoryTeaser'
+export * from './HomePageBody'

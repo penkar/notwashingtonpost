@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import { bindActionCreators } from 'redux';
 import cn from 'classnames'
 
-import {HeaderRow, TableOfContents} from '../Components/'
+import {HeaderRow, TableOfContents, HomePageBody,} from '../Components/'
 import {Slogan, RecentStories, StoryTeaser,} from '../Components/Functional'
 import * as actions from '../Actions/'
 import {getStories} from '../Utility';
@@ -29,14 +29,17 @@ class App extends React.Component {
   }
 
   render() {
-    let {actions, settingsReducer} = this.props;
+    let {actions, settingsReducer, newsStoryReducer = {}, newsTaglineReducer} = this.props;
     return (
       <div>
         <HeaderRow actions={actions} />
         { TableOfContents(settingsReducer.tableofcontents) }
         <div className={cn('app-body', {tableofcontents:settingsReducer.tableofcontents})}>
           { Slogan() }
-          { RecentStories(this.props.newsTaglineReducer.stories) }
+          { RecentStories(newsTaglineReducer.stories) }
+
+          <HomePageBody stories={newsStoryReducer.news}/>
+
         </div>
       </div>
     )
