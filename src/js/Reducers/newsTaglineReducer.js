@@ -1,13 +1,11 @@
 import {SET_STORY_TAGS} from '../Constants'
 
-const initial = {
-  stories: [],
-}
+const initial = []
 
 const newsTaglineReducer = (state = initial, action) => {
   switch (action.type) {
     case SET_STORY_TAGS:
-      return {stories: action.value}
+      return action.value.map((str) => ({title:str.title, href:str.id}))
     default:
       return state;
   }

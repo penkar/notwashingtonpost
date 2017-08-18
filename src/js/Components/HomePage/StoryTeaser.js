@@ -9,7 +9,10 @@ const StoryTeaser = ({story, eClass = '', author, title}, i) => {
 
       {author && <div className='author'>{author.join(', ')}</div>}
       
-      { story.map((line, i) => ( StoryElement(line, i) )) }
+      { story[0] && StoryElement(story[0], 0) }
+      { story[1] && StoryElement(story[1], 1) }
+      { story[2] && StoryElement(story[2], 2) }
+
     </div>
   );
 }

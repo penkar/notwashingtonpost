@@ -30,13 +30,14 @@ class App extends React.Component {
 
   render() {
     let {actions, settingsReducer, newsStoryReducer = {}, newsTaglineReducer} = this.props;
+    console.log(newsTaglineReducer)
     return (
       <div>
         <HeaderRow actions={actions} />
         { TableOfContents(settingsReducer.tableofcontents) }
         <div className={cn('app-body', {tableofcontents:settingsReducer.tableofcontents})}>
           { Slogan() }
-          { RecentStories(newsTaglineReducer.stories) }
+          { RecentStories(newsTaglineReducer) }
 
           <HomePageBody stories={newsStoryReducer.news}/>
 
