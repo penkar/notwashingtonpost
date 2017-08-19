@@ -23,7 +23,7 @@ const Sample = [{
 },{
   id:`0002`,
   date: new Date(),
-  section: 'opinion',
+  section: 'opinions',
   subSection:'article',
   title: 'Thing Theory',
   author:['Gabriel Maximus', 'Shresth Munroe'],
@@ -49,7 +49,7 @@ const Sample = [{
 },{
   id:`0003`,
   date: new Date(),
-  section: 'opinion',
+  section: 'opinions',
   subSection:'article',
   title: `Shoot the robot`,
   author:['Costanzo Arthur', 'Arie Tatius'],
@@ -76,7 +76,7 @@ const Sample = [{
 },{
   id:`0004`,
   date: new Date(),
-  section: 'opinion',
+  section: 'opinions',
   subSection:'article',
   title: 'Epileptic Trees?',
   author:['Flex ArmStrong', 'Tad Hamilton', 'Prudence Jeetendra'],
@@ -114,7 +114,7 @@ const Sample = [{
 },{
   id:`0005`,
   date: new Date(),
-  section: 'opinion',
+  section: 'opinions',
   subSection:'article',
   title: 'Empty Room Psych',
   author:['Arnoud Pythagoras'],
@@ -136,7 +136,7 @@ const Sample = [{
 },{
   id:`0006`,
   date: new Date(),
-  section: 'opinion',
+  section: 'opinions',
   subSection:'article',
   title: 'Ironic Echo',
   author:['Milton Rambert'],
@@ -158,8 +158,8 @@ const Sample = [{
 },{
   id:`0007`,
   date: new Date(),
-  section: 'opinion',
-  subSection:'article',
+  section: 'politics',
+  subSection:'courtsandlaw',
   title: 'You Will Know What to Do',
   author:['Pius Tryphon', 'Cianán Constantin'],
   header:`"Ornare nunc luctus convallis, nec viverra tincidunt enim diam tempor"`,
@@ -184,8 +184,8 @@ const Sample = [{
 },{
   id:`0008`,
   date: new Date(),
-  section: 'opinion',
-  subSection:'article',
+  section: 'politics',
+  subSection:'thewhitehouse',
   title: 'Checkov Gun',
   author:['Tom Dragomir'],
   header:`"Vestibulum tellus potenti morbi vestibulum sit..."`,
@@ -214,8 +214,8 @@ const Sample = [{
 },{
   id:`0009`,
   date: new Date(),
-  section: 'opinion',
-  subSection:'article',
+  section: 'politics',
+  subSection:'senate',
   title: 'Objective Correlative',
   author:['Firouz Amse'],
   header:`"Vestibulum tellus potenti morbi vestibulum sit..."`,

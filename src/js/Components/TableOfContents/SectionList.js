@@ -23,23 +23,23 @@ const List = [{
   sublinks: [{
     label:'The White House',
     key:'thewhitehouse',
-    link:'/politics/thewhitehouse',
+    link:'/#thewhitehouse',
   },{
     label:'Courts and Law',
-    key:'courts',
-    link:'/politics/courts',
+    key:'courtsandlaw',
+    link:'/#courtsandlaw',
   },{
     label:'Polling',
     key:'polling',
-    link:'/politics/polling',
+    link:'/#polling',
   },{
     label:'Senate',
     key:'senate',
-    link:'/politics/senate',
+    link:'/#senate',
   },{
     label:'House of Representatives',
-    key:'houseofreps',
-    link:'/politics/houseofreps',}
+    key:'houseofrepresentatives',
+    link:'/#houseofrepresentatives',}
   ],
 },{
   label:'Sports',
@@ -48,15 +48,15 @@ const List = [{
   sublinks: [{
     label:'NFL',
     key:'nfl',
-    link:'/sports/nfl',
+    link:'#nfl',
   },{
     label:'NBA',
     key:'nba',
-    link:'/sports/nba',
+    link:'#nba',
   },{
     label:'MLB',
     key:'mlb',
-    link:'/sports/mlb',
+    link:'#mlb',
   }],
 },{
   label:'News Letter',
@@ -70,19 +70,19 @@ const List = [{
   sublinks:[{
     label:'Education',
     key:'education',
-    link:'/national/education',
+    link:'#education',
   },{
     label:'Investigations',
     key:'investigations',
-    link:'/national/investigations',
+    link:'#investigations',
   },{
     label:'Obituaries',
     key:'obituaries',
-    link:'/national/obituaries',
+    link:'#obituaries',
   },{
     label:'National Security',
     key:'nationalsecurity',
-    link:'/national/nationalsecurity',
+    link:'#nationalsecurity',
   },{
     label:'Health & Science',
     key:'HealthScience',
@@ -90,7 +90,7 @@ const List = [{
   },{
     label:'True Crime',
     key:'truecrime',
-    link:'/national/truecrime',
+    link:'#truecrime',
   }]
 },{
   label:'Tech',
@@ -99,11 +99,11 @@ const List = [{
   sublinks: [{
     label:'Innovation',
     key:'innovation',
-    link:'/tech/innovation',
+    link:'#innovation',
   },{
     label:'Silicon Valley',
     key:'siliconvalley',
-    link:'/tech/siliconvalley',
+    link:'#siliconvalley',
   }],
 },{
   label:'Business',
@@ -112,27 +112,27 @@ const List = [{
   sublinks: [{
     label:'On Leadership',
     key:'onleadership',
-    link:'/business/onleadership',
+    link:'#onleadership',
   },{
     label:'Personal Finance',
     key:'personalfinance',
-    link:'/business/personalfinance',
+    link:'#personalfinance',
   },{
     label:'Energy and Environment',
     key:'energyandenvironment',
-    link:'/business/energyandenvironment',
+    link:'#energyandenvironment',
   },{
     label:'Markets',
     key:'markets',
-    link:'/business/markets',
+    link:'#markets',
   },{
     label:'World Business',
     key:'worldbusiness',
-    link:'/business/worldbusiness',
+    link:'#worldbusiness',
   },{
     label:'Capital Markets',
     key:'capitalmarkets',
-    link:'/business/capitalmarkets',
+    link:'#capitalmarkets',
   }],
 },{
   label:'Entertainment',
@@ -141,35 +141,35 @@ const List = [{
   sublinks: [{
     label:'Books',
     key:'books',
-    link:'/entertainment/books',
+    link:'#books',
   },{
     label:'Comics',
     key:'comics',
-    link:'/entertainment/comics',
+    link:'#comics',
   },{
     label:'Television',
     key:'television',
-    link:'/entertainment/television',
+    link:'#television',
   },{
     label:'Movies',
     key:'movies',
-    link:'/entertainment/movies',
+    link:'#movies',
   },{
     label:'Museum',
     key:'museum',
-    link:'/entertainment/museum',
+    link:'#museum',
   },{
     label:'Music',
     key:'music',
-    link:'/entertainment/music',
+    link:'#music',
   },{
     label:'Theater and Dance',
     key:'theateranddance',
-    link:'/entertainment/theateranddance',
+    link:'#theateranddance',
   },{
     label:'Bars / Clubs',
     key:'barsclubs',
-    link:'/entertainment/barsclubs',
+    link:'#barsclubs',
   }],
 },{
   label:'Lifestyle',
@@ -178,23 +178,23 @@ const List = [{
   sublinks: [{
     label:'Food',
     key:'food',
-    link:'/lifestyle/food',
+    link:'#food',
   },{
     label:'Travel',
     key:'travel',
-    link:'/lifestyle/travel',
+    link:'#travel',
   },{
     label:'Wellness',
     key:'wellness',
-    link:'/lifestyle/wellness',
+    link:'#wellness',
   },{
     label:'Fashion',
     key:'fashion',
-    link:'/lifestyle/fashion',
+    link:'#fashion',
   },{
     label:'Home and Garden',
     key:'homeandgarden',
-    link:'/lifestyle/homeandgarden',
+    link:'#homeandgarden',
   }],
 }]
 

@@ -43,14 +43,12 @@ class App extends React.Component {
     let {hash} = this.state;
     let stories = this._relevantStories();
 
-    // window.ne = newsStoryReducer;
-    // <HeaderRow actions={actions} />
     return (
       <div>
         { HeaderRow(actions) }
         { TableOfContents(settingsReducer.tableofcontents) }
         <div className={cn('app-body', {tableofcontents:settingsReducer.tableofcontents})}>
-          { !hash && Slogan() }
+          { Slogan() }
           { !hash && RecentStories(newsTaglineReducer) }
           { stories.length > 1 && HomePageBody(stories) }
 
@@ -67,10 +65,9 @@ class App extends React.Component {
     } else if(parseInt(hash)) {
       return newsStoryReducer.filter((str) => (str.id == hash));
     } else if(hash) {
-      return [{title:'', author:'', story:[]}]
-    } else {
-      return [{title:'', author:'', story:[]}]
+      return newsStoryReducer.filter((str) => (str.section == hash || str.subSection == hash));
     }
+    return [];
   }
 
   _body() {
