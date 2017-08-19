@@ -1,6 +1,6 @@
 import React from 'react'
 import HeaderButton from './HeaderButton'
-import HeaderLink from './HeaderLink'
+import {HeaderLink, HeaderLinkFunc} from './HeaderLink'
 import Links from './Links'
 
 import Bell from 'react-icons/lib/fa/bell-o'
@@ -35,7 +35,7 @@ class HeaderRow extends React.Component {
             <Bars className='standard-icon' />
           </HeaderButton>
 
-          { Links.map((link, i) => (<HeaderLink {...link} key={i} />))}
+          { Links.map((link, i) => (HeaderLinkFunc(link, i))) }
 
         </ul>
 

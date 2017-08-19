@@ -1,30 +1,30 @@
 const Links = [{
   title:'Politics',
-  link: '',
+  link: '#politics',
 },{
   title:'Opinions',
-  link: '',
+  link: '#opinions',
 },{
   title:'Sports',
-  link: '',
+  link: '#sports',
 },{
   title:'Local',
-  link: '',
+  link: '#local',
 },{
   title:'National',
-  link: '',
+  link: '#national',
 },{
   title:'World',
-  link: '',
+  link: '#world',
 },{
   title:'Business',
-  link: '',
+  link: '#business',
 },{
   title:'Tech',
-  link: '',
+  link: '#tech',
 },{
   title:'Lifestyle',
-  link: '',
+  link: '#lifestyle',
 }]
 
 export default Links;
