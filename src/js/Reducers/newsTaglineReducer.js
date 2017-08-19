@@ -5,7 +5,7 @@ const initial = []
 const newsTaglineReducer = (state = initial, action) => {
   switch (action.type) {
     case SET_STORY_TAGS:
-      return action.value.map((str) => ({title:str.title, href:str.setting.id}))
+      return action.value.map((str) => ({title:str.title, href:str.id}))
     default:
       return state;
   }

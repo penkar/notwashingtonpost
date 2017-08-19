@@ -61,7 +61,7 @@ class App extends React.Component {
     if(!hash) {
       return newsStoryReducer;
     } else if(parseInt(hash)) {
-      return newsStoryReducer.filter((str) => (str.setting.id == hash));
+      return newsStoryReducer.filter((str) => (str.id == hash));
     } else if(hash) {
       return [{title:'', author:'', story:[]}]
     } else {

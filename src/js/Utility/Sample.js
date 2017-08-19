@@ -1,10 +1,8 @@
 const Sample = [{
-  setting: {
-    id:`0001`,
-    date: new Date(),
-    section: 'politics',
-    subSection:'thewhitehouse',
-  },
+  id:`0001`,
+  date: new Date(),
+  section: 'politics',
+  subSection:'thewhitehouse',
   author:['Ingólfr Halvar'],
   title: 'Pathetic Fallacy',
   header:`"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."`,
@@ -23,12 +21,10 @@ const Sample = [{
     sClass:'',
   }]
 },{
-  setting: {
-    id:`0002`,
-    date: new Date(),
-    section: 'opinion',
-    subSection:'article',
-  },
+  id:`0002`,
+  date: new Date(),
+  section: 'opinion',
+  subSection:'article',
   title: 'Thing Theory',
   author:['Gabriel Maximus', 'Shresth Munroe'],
   header:`"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."`,
@@ -51,12 +47,10 @@ const Sample = [{
     sClass:'',
   }]
 },{
-  setting: {
-    id:`0003`,
-    date: new Date(),
-    section: 'opinion',
-    subSection:'article',
-  },
+  id:`0003`,
+  date: new Date(),
+  section: 'opinion',
+  subSection:'article',
   title: `Shoot the robot`,
   author:['Costanzo Arthur', 'Arie Tatius'],
   header:`"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."`,
@@ -80,12 +74,10 @@ const Sample = [{
     sClass:'',
   }]
 },{
-  setting: {
-    id:`0004`,
-    date: new Date(),
-    section: 'opinion',
-    subSection:'article',
-  },
+  id:`0004`,
+  date: new Date(),
+  section: 'opinion',
+  subSection:'article',
   title: 'Epileptic Trees?',
   author:['Flex ArmStrong', 'Tad Hamilton', 'Prudence Jeetendra'],
   header:`Vitae lacinia vestibulum, enim egestas, consequat lacinia accumsan tellus erat`,
@@ -120,12 +112,10 @@ const Sample = [{
     sClass:'',
   }]
 },{
-  setting: {
-    id:`0005`,
-    date: new Date(),
-    section: 'opinion',
-    subSection:'article',
-  },
+  id:`0005`,
+  date: new Date(),
+  section: 'opinion',
+  subSection:'article',
   title: 'Empty Room Psych',
   author:['Arnoud Pythagoras'],
   header:`Erat mus, natus sit maecenas amet, sodales interdum`,
@@ -144,12 +134,10 @@ const Sample = [{
     sClass:'',
   }]
 },{
-  setting: {
-    id:`0006`,
-    date: new Date(),
-    section: 'opinion',
-    subSection:'article',
-  },
+  id:`0006`,
+  date: new Date(),
+  section: 'opinion',
+  subSection:'article',
   title: 'Ironic Echo',
   author:['Milton Rambert'],
   header:`"Voluptatem convallis morbi sociosqu iaculi..."`,
@@ -168,12 +156,10 @@ const Sample = [{
     sClass:'',
   }]
 },{
-  setting: {
-    id:`0007`,
-    date: new Date(),
-    section: 'opinion',
-    subSection:'article',
-  },
+  id:`0007`,
+  date: new Date(),
+  section: 'opinion',
+  subSection:'article',
   title: 'You Will Know What to Do',
   author:['Pius Tryphon', 'Cianán Constantin'],
   header:`"Ornare nunc luctus convallis, nec viverra tincidunt enim diam tempor"`,
@@ -196,12 +182,10 @@ const Sample = [{
     sClass:'',
   }]
 },{
-  setting: {
-    id:`0008`,
-    date: new Date(),
-    section: 'opinion',
-    subSection:'article',
-  },
+  id:`0008`,
+  date: new Date(),
+  section: 'opinion',
+  subSection:'article',
   title: 'Checkov Gun',
   author:['Tom Dragomir'],
   header:`"Vestibulum tellus potenti morbi vestibulum sit..."`,
@@ -224,6 +208,36 @@ const Sample = [{
     sClass:'',
   },{
     text:`Tellus aliquam maecenas integer sit lacus, metus lectus dolor, ut dolor pulvinar, amet pretium fusce vestibulum sapien amet. Wisi placerat mi, eros suspendisse laoreet pellentesque. Turpis orci dolor platea nunc urna bibendum, morbi velit dolor pellentesque arcu velit eget. Enim iaculis tellus. Eros orci, suspendisse in nisl, leo metus wisi sed, consequat bibendum elementum suscipit enim, quis in ante aenean. Integer aenean purus curabitur suspendisse elit in. Convallis felis sem sed, gravida consectetuer sed viverra porttitor sit, ultricies orci risus venenatis necessitatibus ac, quis condimentum lorem aut mus ipsum dolor, eget quis eleifend at tempus. Sapien leo nisl, lobortis ipsum a et facilisis a imperdiet. Sollicitudin quis suspendisse, vitae vel nunc ante tincidunt et laborum, egestas magna quis urna libero. Sed nulla, diam proin, sociis aute convallis quam in.`,
+    style:{},
+    sClass:'',
+  }]
+},{
+  id:`0009`,
+  date: new Date(),
+  section: 'opinion',
+  subSection:'article',
+  title: 'Objective Correlative',
+  author:['Firouz Amse'],
+  header:`"Vestibulum tellus potenti morbi vestibulum sit..."`,
+  subheader:`"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."`,
+  story:[{
+    text:`Proin in ante ipsum, dolor amet, cras convallis nam mauris nam at laoreet, lacinia viverra mauris vitae luctus ridiculus lectus. Pretium et ligula justo eget, pellentesque leo amet diam ipsum dolor ut, nec nullam tellus congue, posuere nullam erat vel. Eu vulputate mauris leo quisque vitae, et velit non quis integer nunc. Nullam habitasse ut duis purus. Aut justo. Dui faucibus, velit dui sed nam in, ad metus nascetur diam sociosqu lectus cras, ut nec ante at nullam, quam quis lorem leo pellentesque mollis. Velit fermentum est. Iaculis nunc ac lorem, vivamus neque class mollis et cras, facilisis ligula arcu ridiculus. Enim urna dis sit, sit phasellus purus turpis, viverra quam id, pellentesque leo egestas mauris praesent tempus.`,
+    style:{},
+    sClass:'',
+  },{
+    text:`Ut at, amet nunc nunc turpis aliquam vivamus duis, facilisis massa ipsum, bibendum condimentum augue mollis tincidunt dolor mi. Libero velit ipsum vel in aliquam, nec ipsum, ut gravida nisl cras id mi, nisl tellus sed dui sit vulputate sed. Sit est elit amet, vulputate nibh. Nunc nam lorem cursus lorem enim, metus est nunc eu nulla felis. Mollis pulvinar magna ut praesent in varius, tempus wisi ultrices nulla, dictum faucibus in imperdiet vestibulum amet, at quis vestibulum vestibulum, quisque donec in feugiat mauris erat donec. Et lectus rutrum condimentum vel non. Egestas platea neque nec curabitur eros elit, sollicitudin nisl et, dui sed velit dui sollicitudin iaculis orci. Vestibulum etiam. Habitant ipsum, neque quisque nulla mauris velit, aliquet est aliquet pede, pulvinar vestibulum commodo phasellus at. Nulla mi leo suspendisse. Non ipsum magnis, integer metus ut, malesuada sed leo et.`,
+    style:{},
+    sClass:'',
+  },{
+    text:`Lobortis non lacinia eu ut amet ipsum, adipiscing est nec dis dolor nunc nec. Maecenas dolor proin, pellentesque faucibus massa ullamcorper, vitae lacinia phasellus suscipit suscipit leo ipsum, odit hendrerit turpis sit, egestas dui non. Ultricies ridiculus, lorem enim ut. Libero sodales condimentum, purus sem rhoncus nec augue lacinia, quis amet sed at sapien accusantium, quam duis auctor cursus, amet cubilia in risus urna nam. Vel justo mollis rerum posuere in sed, urna lorem arcu condimentum imperdiet est eget, consequat diam nullam lacus est vel suspendisse. Potenti lacus dis neque amet, amet dolor quam, tincidunt faucibus nunc suscipit. Cras mauris urna blandit inceptos iaculis eget, mi maecenas convallis neque sit id, ut justo sapien eget in in aliquet, ligula aliquam in sed, sed orci elementum iaculis.`,
+    style:{},
+    sClass:'',
+  },{
+    text:`Eget fusce ac in, auctor fermentum aliquid, erat in accumsan curabitur nisl dolor pellentesque, in dui asperiores, dictum justo massa. Risus elit ut orci arcu nulla, aliquam facilisis et rhoncus, dictumst tellus porttitor felis mi phasellus ultrices. Sollicitudin netus vel magnam blandit enim, mauris massa et nec. Ipsum nunc suspendisse, wisi dapibus leo, vestibulum mauris vivamus inceptos, dictumst vestibulum. Hendrerit suspendisse lectus vel vestibulum hac, donec vestibulum quis nam, pellentesque sed vel elit ornare vel. Neque in rutrum gravida provident sagittis suspendisse, est augue faucibus sed.`,
+    style:{},
+    sClass:'',
+  },{
+    text:`Feugiat interdum id nulla, ullamcorper turpis, quam quisque nulla torquent nec sed etiam. Nonummy non dolor vitae quisque, habitasse sem sed lorem, leo arcu ullamcorper leo parturient imperdiet quis. Dui dapibus in senectus, arcu risus cursus morbi dui eu. Cubilia lobortis cras id facilisis diam rhoncus, ad id magna morbi, in suspendisse eget phasellus, sed ut neque arcu erat rutrum. Consequat ultricies imperdiet condimentum, tincidunt amet erat urna, cursus feugiat commodo non, dictum convallis quasi lacus nam. Tortor lacinia amet, veniam wisi pede ac vel, sed dui recusandae in lacus, in sapien justo consectetuer. Est arcu nec orci sit lacus, tortor posuere amet tellus luctus id eu, sed neque, augue a.`,
     style:{},
     sClass:'',
   }]
