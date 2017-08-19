@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import { bindActionCreators } from 'redux';
 import cn from 'classnames'
 
-import {HeaderRow, TableOfContents, HomePageBody,} from '../Components/'
+import {HeaderRow, TableOfContents, HomePageBody, MainArticle,} from '../Components/'
 import {Slogan, RecentStories, StoryTeaser,} from '../Components/Functional'
 import * as actions from '../Actions/'
 import {getStories} from '../Utility';
@@ -22,28 +22,38 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this._click = this._click.bind(this);
+    this._body = this._body.bind(this);
+    this._body = this._body.bind(this);
+    this.state = {
+      hash: window.location.hash.replace(/^\#/,'')
+    };
   }
   componentDidMount() {
     document.addEventListener('click', this._click);
     getStories(this.props.actions);
+    window.onhashchange = this._body;
   }
 
   render() {
     let {actions, settingsReducer, newsStoryReducer = {}, newsTaglineReducer} = this.props;
-    console.log(newsTaglineReducer)
+    let {hash} = this.state;
     return (
       <div>
         <HeaderRow actions={actions} />
         { TableOfContents(settingsReducer.tableofcontents) }
         <div className={cn('app-body', {tableofcontents:settingsReducer.tableofcontents})}>
-          { Slogan() }
-          { RecentStories(newsTaglineReducer) }
+          { !hash && Slogan() }
+          { !hash && RecentStories(newsTaglineReducer) }
+          { !hash && HomePageBody(newsStoryReducer) }
 
-          <HomePageBody stories={newsStoryReducer.news}/>
-
+          { hash && MainArticle(newsStoryReducer.filter((str) => (str.setting.id == hash))) }
         </div>
       </div>
     )
+  }
+
+  _body() {
+    this.setState({hash: window.location.hash.replace(/^\#/,'')});
   }
 
   _click(e) {

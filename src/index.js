@@ -7,6 +7,7 @@ require('./style/Central.scss')
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 import reducer from './js/Reducers'
+
 const store = createStore(reducer)
 
 render(

@@ -1,13 +1,11 @@
 import {SET_STORY_ACTION} from '../Constants'
 
-const initial = {
-  news: [],
-}
+const initial = [];
 
 const newsStoryReducer = (state = initial, action) => {
   switch (action.type) {
     case SET_STORY_ACTION:
-      return {news: action.value}
+      return action.value
     default:
       return state;
   }
