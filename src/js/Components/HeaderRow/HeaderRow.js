@@ -7,51 +7,33 @@ import Bell from 'react-icons/lib/fa/bell-o'
 import Search from 'react-icons/lib/fa/search'
 import Bars from 'react-icons/lib/fa/bars'
 
-class HeaderRow extends React.Component {
-  constructor(props) {
-    super(props)
-  }
+const HeaderRow  = (actions) => (
+  <div id='header-row'>
+    <ul className='news-link-ul' key='0'>
 
-  componentDidMount() {
-    let title = document.getElementsByTagName('title')[0];
-    title.innerText = `News of the Day ${(new Date()).toLocaleDateString()}`
-  }
+      <HeaderButton title={''} link={''}>
+        <Search className='standard-icon' />
+      </HeaderButton>
 
-  render() {
-    return (
-      <div id='header-row'>
-        <ul className='news-link-ul' key='0'>
+      <HeaderButton
+        title={''}
+        link={''}
+        clickValue='tableofcontents'
+        onClick={actions.changeSettingBool}>
+        <span>Sections&nbsp;</span>
+        <Bars className='standard-icon' />
+      </HeaderButton>
 
-          <HeaderButton title={''} link={''}>
-            <Search className='standard-icon' />
-          </HeaderButton>
+      { Links.map((link, i) => (HeaderLinkFunc(link, i))) }
 
-          <HeaderButton
-            title={''}
-            link={''}
-            clickValue='tableofcontents'
-            onClick={this.props.actions.changeSettingBool}>
-            <span>Sections&nbsp;</span>
-            <Bars className='standard-icon' />
-          </HeaderButton>
+    </ul>
 
-          { Links.map((link, i) => (HeaderLinkFunc(link, i))) }
-
-        </ul>
-
-        <ul className='news-link-ul' key='1'>
-          <HeaderLink title={''} link={''}>
-            <Bell className='standard-icon'/>
-          </HeaderLink>
-        </ul>
-      </div>
-    )
-  }
-}
-
-HeaderRow.defaultProps = {
-  actions: {},
-}
+    <ul className='news-link-ul' key='1'>
+      <HeaderLink title={''} link={''}>
+        <Bell className='standard-icon'/>
+      </HeaderLink>
+    </ul>
+  </div>
+)
 
 export default HeaderRow
-//&#10133;

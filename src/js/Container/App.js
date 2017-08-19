@@ -29,7 +29,10 @@ class App extends React.Component {
       hash: window.location.hash.replace(/^\#/,'')
     };
   }
+
   componentDidMount() {
+    let title = document.getElementsByTagName('title')[0];
+    title.innerText = `News of the Day ${(new Date()).toLocaleDateString()}`;
     document.addEventListener('click', this._click);
     getStories(this.props.actions);
     window.onhashchange = this._body;
@@ -39,11 +42,12 @@ class App extends React.Component {
     let {actions, settingsReducer, newsStoryReducer, newsTaglineReducer} = this.props;
     let {hash} = this.state;
     let stories = this._relevantStories();
-    window.ne = newsStoryReducer;
 
+    // window.ne = newsStoryReducer;
+    // <HeaderRow actions={actions} />
     return (
       <div>
-        <HeaderRow actions={actions} />
+        { HeaderRow(actions) }
         { TableOfContents(settingsReducer.tableofcontents) }
         <div className={cn('app-body', {tableofcontents:settingsReducer.tableofcontents})}>
           { !hash && Slogan() }
