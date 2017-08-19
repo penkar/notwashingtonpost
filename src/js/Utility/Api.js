@@ -1,8 +1,8 @@
 import Sample from './Sample'
 
 export const getStories = (actions) => {
-  actions.setStoryTags(Sample.news);
-  actions.setStoryAction(Sample.news);
+  actions.setStoryTags(Sample);
+  actions.setStoryAction(Sample);
   // fetch(``)
   //   .then(res=>res.json())
   //   .then(response=> {
