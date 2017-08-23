@@ -23,23 +23,23 @@ const List = [{
   sublinks: [{
     label:'The White House',
     key:'thewhitehouse',
-    link:'/#thewhitehouse',
+    link:'#thewhitehouse',
   },{
     label:'Courts and Law',
     key:'courtsandlaw',
-    link:'/#courtsandlaw',
+    link:'#courtsandlaw',
   },{
     label:'Polling',
     key:'polling',
-    link:'/#polling',
+    link:'#polling',
   },{
     label:'Senate',
     key:'senate',
-    link:'/#senate',
+    link:'#senate',
   },{
     label:'House of Representatives',
     key:'houseofrepresentatives',
-    link:'/#houseofrepresentatives',}
+    link:'#houseofrepresentatives',}
   ],
 },{
   label:'Sports',
