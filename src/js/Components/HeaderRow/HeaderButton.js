@@ -11,7 +11,7 @@ class HeaderButton extends React.Component {
     return (
       <div
         onClick={this._click}
-        className={cn('news-button', {})}>
+        className={cn('news-button', this.props.klass)}>
         { this.props.title }
         { this.props.children }
       </div>
@@ -26,6 +26,7 @@ class HeaderButton extends React.Component {
 HeaderButton.defaultProps = {
   title:'',
   link:'',
+  klass:'',
   clickValue:'',
   onClick:()=>(null),
 }

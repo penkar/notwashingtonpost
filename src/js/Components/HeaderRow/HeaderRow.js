@@ -7,19 +7,24 @@ import Bell from 'react-icons/lib/fa/bell-o'
 import Search from 'react-icons/lib/fa/search'
 import Bars from 'react-icons/lib/fa/bars'
 
-const HeaderRow  = (actions) => (
+const HeaderRow  = ({actions, settings}) => (
   <div id='header-row'>
     <ul className='news-link-ul' key='0'>
 
-      <HeaderButton title={''} link={''}>
+      <HeaderButton
+        klass={settings.searchSection ? 'search' : ''}
+        clickValue='searchSection'
+        onClick={actions.changeSettingBool}
+        title={''}>
         <Search className='standard-icon' />
       </HeaderButton>
 
       <HeaderButton
-        title={''}
-        link={''}
+        klass=''
         clickValue='tableofcontents'
-        onClick={actions.changeSettingBool}>
+        onClick={actions.changeSettingBool}
+        title={''}>
+
         <span>Sections&nbsp;</span>
         <Bars className='standard-icon' />
       </HeaderButton>

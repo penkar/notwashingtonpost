@@ -45,7 +45,7 @@ class App extends React.Component {
 
     return (
       <div>
-        { HeaderRow(actions) }
+        { HeaderRow({actions, settings: settingsReducer}) }
         { TableOfContents(settingsReducer.tableofcontents) }
         <div className={cn('app-body', {tableofcontents:settingsReducer.tableofcontents})}>
           { Slogan() }

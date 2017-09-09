@@ -2,9 +2,12 @@ import {CHANGE_SETTING, CHANGE_SETTING_BOOL, } from '../Constants'
 
 const initial = {
   tableofcontents: false,
+  searchSection:false,
+  searchString:'',
 }
 
 const settingsReducer = (state = initial, action) => {
+  console.log(action)
   switch (action.type) {
     case CHANGE_SETTING_BOOL:
       let newstate = {};

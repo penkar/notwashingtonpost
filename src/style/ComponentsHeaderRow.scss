@@ -22,15 +22,27 @@
     padding: 6px 10px;
     margin: 2px;
     margin-right: 8px;
+    color: white;
+    min-width:18px;
 
     &:hover {
       border-color: white;
-      // zoom: 105%;
+    }
+
+    &.search {
+      min-width: 200px;
+      color: black;
+      background-color: white;
     }
   }
 
   .standard-icon {
     font-size: 1rem;
+    color: white;
+  }
+
+  .search .standard-icon {
+    color: darkgray;
   }
 
   .news-link-ul {
