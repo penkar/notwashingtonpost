@@ -1,2 +1,1 @@
-import TableOfContents from './TableOfContents';
-export {TableOfContents};
+export * from './TableOfContents';

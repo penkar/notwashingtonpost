@@ -1,7 +1,7 @@
 import React from 'react'
 import cn from 'classnames'
 
-const MultiContent = ({primary = {label:'',key:'',link:''}, secondary = []}) => {
+export function MultiContent({primary = {label:'',key:'',link:''}, secondary = []}) {
   return (
     <div className={cn('multicontent-component content-component')}>
       <a className={cn('primary')} href={primary.link} key={primary.key}>{ primary.label }</a>
@@ -11,5 +11,3 @@ const MultiContent = ({primary = {label:'',key:'',link:''}, secondary = []}) => 
     </div>
   )
 }
-
-export default MultiContent
