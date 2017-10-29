@@ -1,5 +1,5 @@
 # notwashingtonpost
-Loose clone of the WaPo website built in React / WebPack.
+Loose clone of the WaPo website built in React / WebPack. A [preview](http://jspenkar.com/notwashingtonpost/) is available.
 
 The site loosely follows the look and feel of the [Washington Post](https://www.washingtonpost.com/) and [New York Times](https://www.nytimes.com/) website. 
 
