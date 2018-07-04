@@ -1,9 +1,12 @@
-var path = require('path');
+var path = require("path");
 module.exports = {
   context:__dirname,
+  entry:{
+    bundle:"./src/index.js"
+  },
   output:{
-    path:path.resolve(__dirname,'dist'),
-    filename:'bundle.js'
+    path:path.resolve(__dirname,"dist"),
+    filename:"[name].js"
   },
   module:{
     rules:[{
@@ -13,17 +16,17 @@ module.exports = {
     },{
       test:/\.ttf/,
       exclude:/node_modules/,
-      use:{ loader:'url-loader' }
+      use:{loader:"url-loader"}
     },{
       test:/\.js$/,
       exclude:/node_modules/,
-      use: {
-        loader:'babel-loader',
-        query: {
-          presets: ['react', 'es2015', 'stage-0']
+      use:{
+        loader:"babel-loader",
+        query:{
+          presets:["react","es2015","stage-0"]
         },
       }
     }]
   },
-  devtool:'source-map'
+  devtool:"source-map"
 }
