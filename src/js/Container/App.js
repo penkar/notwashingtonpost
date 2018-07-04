@@ -21,10 +21,6 @@ const mapActions = (dispatch) =>({
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this._click = this._click.bind(this);
-    this._body = this._body.bind(this);
-    this._body = this._body.bind(this);
-    this._relevantStories = this._relevantStories.bind(this);
     this.state = {
       hash: window.location.hash.replace(/^\#/,'')
     };
@@ -58,7 +54,7 @@ class App extends React.Component {
     )
   }
 
-  _relevantStories() {
+  _relevantStories = () => {
     let {newsStoryReducer} = this.props, {hash} = this.state;
     if(!hash) {
       return newsStoryReducer;
@@ -70,11 +66,9 @@ class App extends React.Component {
     return [];
   }
 
-  _body() {
-    this.setState({hash: window.location.hash.replace(/^\#/,'')});
-  }
+  _body = () => this.setState({hash: window.location.hash.replace(/^\#/,'')});
 
-  _click(e) {
+  _click = (e) => {
     if(!this.props.settingsReducer.tableofcontents) return null;
     let target = e.target;
     while(target) {

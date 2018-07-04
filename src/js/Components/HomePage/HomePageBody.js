@@ -13,7 +13,7 @@ const HomePageBody = (stories) => {
     } else {
       arr3.push(StoryTeaser(item, i));
     }
-  })
+  });
 
   return (
     <div className={cn('home-page-body')}>

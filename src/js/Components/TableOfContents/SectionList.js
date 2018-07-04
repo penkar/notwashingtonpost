@@ -1,4 +1,3 @@
-// <Content section={{label:'Home',link:'/'}} key='Politics' />
 const MultiLink = [{
   primary: {
     label:'Home Page',

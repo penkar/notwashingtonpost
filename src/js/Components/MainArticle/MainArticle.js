@@ -16,4 +16,4 @@ const MainArticle = ({title = '', author = '', story = [], eClass}) => {
   )
 }
 
-export {MainArticle, }
+export {MainArticle}

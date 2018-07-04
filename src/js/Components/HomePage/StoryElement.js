@@ -2,7 +2,6 @@ import React from 'react'
 import cn from 'classnames'
 
 const StoryElement = ({style, type, text, array, sClass = ''}, i) => {
-
   switch (type) {
     case 'title':
       return <span key={i} className={cn('title-story-element', sClass)}>{text}</span>

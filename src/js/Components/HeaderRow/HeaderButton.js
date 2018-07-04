@@ -1,12 +1,6 @@
 import React from 'react';
 import cn from 'classnames'
-
 class HeaderButton extends React.Component {
-  constructor(props) {
-    super(props);
-    this._click = this._click.bind(this);
-  }
-
   render() {
     return (
       <div
@@ -18,7 +12,7 @@ class HeaderButton extends React.Component {
     )
   }
 
-  _click() {
+  _click = () => {
     this.props.onClick(this.props.clickValue);
   }
 }

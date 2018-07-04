@@ -1,3 +1,1 @@
-import Button from './Button/Button.js'
-
-export {Button,}
+export * from './Button/Button.js';

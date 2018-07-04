@@ -25,6 +25,5 @@ const Links = [{
 },{
   title:'Lifestyle',
   link: '#lifestyle',
-}]
-
+}];
 export default Links;

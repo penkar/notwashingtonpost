@@ -3,7 +3,7 @@ import cn from 'classnames'
 
 import {SubContent} from './SubContent'
 
-export function SubContents(arr) {
+export const SubContents = (arr) => {
   if(!arr.length) return null;
   return (
     <div className={cn('subcontents-component thin-shadow')}>
