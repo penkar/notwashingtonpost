@@ -7,7 +7,6 @@ const initial = {
 }
 
 const settingsReducer = (state = initial, action) => {
-  console.log(action)
   switch (action.type) {
     case CHANGE_SETTING_BOOL:
       let newstate = {};

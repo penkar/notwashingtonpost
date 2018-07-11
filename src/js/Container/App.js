@@ -68,9 +68,8 @@ class App extends React.Component {
 
   _body = () => this.setState({hash: window.location.hash.replace(/^\#/,'')});
 
-  _click = (e) => {
+  _click = ({target}) => {
     if(!this.props.settingsReducer.tableofcontents) return null;
-    let target = e.target;
     while(target) {
       if (target.id === 'TableOfContents' || target.id === 'header-row') {break;}
       target = target.parentElement;
