@@ -1,7 +1,11 @@
 import React from 'react';
-import cn from 'classnames';
-export const SubContent = ({label = '', key = '', link = '#'}) => (
-  <div className={cn('subcontent-component')} key={key}>
-    <a href={link}>{label}</a>
+export const SubContent = (props) => (
+  <div className="subcontent-component" key={props.key}>
+    <a href={props.link}>{props.label}</a>
   </div>
 )
+SubContent.defaultProps = {
+  label:'',
+  key:'',
+  link:"#",
+}

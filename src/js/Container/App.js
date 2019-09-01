@@ -82,5 +82,4 @@ App.defaultProps = {
   stories:[],
 }
 
-
 export default connect(state => state, mapActions)(App)

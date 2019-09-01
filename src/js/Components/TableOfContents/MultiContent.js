@@ -8,3 +8,11 @@ export const MultiContent = ({primary = {label:'',key:'',link:''}, secondary = [
     )) }
   </div>
 );
+// MultiContent.defaultProps = {
+//   primary: {
+//     label:'',
+//     key:'',
+//     link:''
+//   },
+//   secondary: []
+// }
