@@ -4,6 +4,7 @@
   "description": "React clone of the Washington Post website.",
   "main": "index.js",
   "scripts": {
+    "dev": "webpack --mode=development --watch=true",
     "start": "webpack --mode=development --watch=true & python -m SimpleHTTPServer",
     "prod": "webpack --mode=production"
   },
@@ -11,25 +12,25 @@
   "license": "ISC",
   "dependencies": {
     "classnames": "^2.2.6",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
     "react-icons": "^2.2.7",
-    "react-redux": "^5.0.7",
-    "redux": "^4.0.0"
+    "react-redux": "^5.1.1",
+    "redux": "^4.0.4"
   },
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.5",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
-    "css-loader": "^3.1.0",
+    "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
     "file-loader": "^1.1.11",
-    "node-sass": "^4.9.2",
-    "sass-loader": "^7.0.3",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.3.1",
     "style-loader": "^0.21.0",
-    "url-loader": "^1.0.1",
-    "webpack": "^4.15.1",
-    "webpack-cli": "^3.0.8"
+    "url-loader": "^1.1.2",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7"
   }
 }
