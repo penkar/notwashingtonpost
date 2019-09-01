@@ -1,5 +1,5 @@
 import React from 'react'
-const RecentStories = (array  = []) => (
+const RecentStories = (array) => (
   <ul className='recent-sectional'>
     <li className='label' key={'title'}>In the News&nbsp;</li>
     { array.map((story, i) => (
@@ -9,4 +9,7 @@ const RecentStories = (array  = []) => (
     )) }
   </ul>
 );
+RecentStories.defaultProps = {
+  array: []
+}
 export {RecentStories};

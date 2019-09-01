@@ -1,7 +1,7 @@
 import React from 'react'
-const HeaderLinkFunc = ({title, link}, i) => (
+const HeaderLinkFunc = (props, i) => (
   <li className='news-link-li' key={i}>
-    <a href={link}>{ title }</a>
+    <a href={props.link}>{ props.title }</a>
   </li>
 );
 
