@@ -1,11 +1,13 @@
 import React from 'react';
-export const SubContent = (props) => (
-  <div className="subcontent-component" key={props.key}>
-    <a href={props.link}>{props.label}</a>
+import { string } from 'prop-types';
+
+export const SubContent = ({ label, link }) => (
+  <div className="subcontent-component">
+    <a href={link}>{label}</a>
   </div>
-)
-SubContent.defaultProps = {
-  label:'',
-  key:'',
-  link:"#",
+);
+
+SubContent.propTypes = {
+  label: string,
+  link: string,
 }
