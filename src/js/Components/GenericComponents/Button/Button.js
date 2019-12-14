@@ -1,25 +1,19 @@
 import React from 'react';
+import { BUTTON_PROPS } from '../../../types';
 import cn from 'classnames';
 
-class Button extends React.Component {
-  render = () => (
+const Button = ({ action, className = '', full = false, label = '', link = '', title = '', type = 'primary' }) => {
+  const buttonClass = cn('generic-button-component', className, type, full);
+  return (
     <div
-      className={cn('generic-button-component', this.props.class, this.props.type, {full: this.props.full})}
-      onClick={this.props.action}
-      title={this.props.title}>
-      { this.props.label }
+      className={buttonClass}
+      onClick={action}
+      title={title}>
+      { label }
     </div>
   );
 }
 
-Button.defaultProps = {
-  action:()=>(null),
-  class:'',
-  full: false,
-  label:'',
-  link:'',
-  title:'',
-  type:'primary',
-}
+Button.propTypes = BUTTON_PROPS;
 
 export {Button};

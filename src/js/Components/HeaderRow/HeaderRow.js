@@ -12,7 +12,7 @@ const HeaderRow  = ({actions, settings}) => (
     <ul className='news-link-ul' key='0'>
 
       <HeaderButton
-        klass={settings.searchSection ? 'search' : ''}
+        className={settings.searchSection ? 'search' : ''}
         clickValue='searchSection'
         onClick={actions.changeSettingBool}
         title={''}>
@@ -20,7 +20,7 @@ const HeaderRow  = ({actions, settings}) => (
       </HeaderButton>
 
       <HeaderButton
-        klass=''
+        className=''
         clickValue='tableofcontents'
         onClick={actions.changeSettingBool}
         title={''}>

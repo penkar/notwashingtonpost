@@ -1,28 +1,18 @@
 import React from 'react';
-import cn from 'classnames'
-class HeaderButton extends React.Component {
-  render() {
-    return (
-      <div
-        onClick={this._click}
-        className={cn('news-button', this.props.klass)}>
-        { this.props.title }
-        { this.props.children }
-      </div>
-    )
-  }
+import cn from 'classnames';
+import { HEADER_BUTTON_PROPS } from '../../types';
 
-  _click = () => {
-    this.props.onClick(this.props.clickValue);
-  }
+export default function HeaderButton ({ clickValue, className='', onClick = ()=>null, children = null, title = '' }) {
+  const onButtonClick = () => onClick(clickValue);
+  const componentClass = cn('news-button', className);
+  return (
+    <div
+      onClick={onButtonClick}
+      className={componentClass}>
+      { title }
+      { children }
+    </div>
+  );
 }
 
-HeaderButton.defaultProps = {
-  title:'',
-  link:'',
-  klass:'',
-  clickValue:'',
-  onClick:()=>(null),
-}
-
-export default HeaderButton;
+HeaderButton.propTypes = HEADER_BUTTON_PROPS
