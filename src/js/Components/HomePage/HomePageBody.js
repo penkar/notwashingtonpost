@@ -3,7 +3,8 @@ import cn from 'classnames';
 import {StoryTeaser} from './StoryTeaser';
 
 const HomePageBody = (stories) => {
-  let arr1 = [], arr2 = [], arr3 = [], arr1Sum = 0, arr2Sum = 0, arr3Sum = 0;
+  const arr1 = [], arr2 = [], arr3 = [];
+  let arr1Sum = 0, arr2Sum = 0, arr3Sum = 0;
   stories.forEach((item, i) => {
     if(arr1Sum <= arr2Sum) {
       item.story.slice(0,3).forEach((tease) => {
@@ -25,11 +26,17 @@ const HomePageBody = (stories) => {
 
   return (
     <div className={cn('home-page-body')}>
-      <div key={1} className='home-page-body-col'>{arr1}</div>
-      <div key={2} className='home-page-body-col'>{arr2}</div>
-      <div key={3} className='home-page-body-col'>{arr3}</div>
+      <div className='home-page-body-col'>
+        {arr1}
+      </div>
+      <div className='home-page-body-col'>
+        {arr2}
+      </div>
+      <div className='home-page-body-col'>
+        {arr3}
+      </div>
     </div>
-  )
+  );
 }
 
 export {HomePageBody}

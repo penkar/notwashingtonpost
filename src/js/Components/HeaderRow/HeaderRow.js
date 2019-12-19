@@ -1,6 +1,6 @@
 import React from 'react'
 import HeaderButton from './HeaderButton'
-import {HeaderLink, HeaderLinkFunc} from './HeaderLink'
+import HeaderLink from './HeaderLink'
 import Links from './Links'
 
 import Bell from 'react-icons/lib/fa/bell-o'
@@ -9,32 +9,28 @@ import Bars from 'react-icons/lib/fa/bars'
 
 const HeaderRow  = ({actions, settings}) => (
   <div id='header-row'>
-    <ul className='news-link-ul' key='0'>
+    <ul className='news-link-ul'>
 
       <HeaderButton
         className={settings.searchSection ? 'search' : ''}
         clickValue='searchSection'
         onClick={actions.changeSettingBool}
-        title={''}>
+      >
         <Search className='standard-icon' />
       </HeaderButton>
 
       <HeaderButton
-        className=''
         clickValue='tableofcontents'
         onClick={actions.changeSettingBool}
-        title={''}>
-
+      >
         <span>Sections&nbsp;</span>
         <Bars className='standard-icon' />
       </HeaderButton>
-
-      { Links.map((link, i) => (HeaderLinkFunc(link, i))) }
-
+      { Links.map((link) => <HeaderLink {...link} key={link.title} />) }
     </ul>
 
-    <ul className='news-link-ul' key='1'>
-      <HeaderLink title={''} link={''}>
+    <ul className='news-link-ul'>
+      <HeaderLink>
         <Bell className='standard-icon'/>
       </HeaderLink>
     </ul>

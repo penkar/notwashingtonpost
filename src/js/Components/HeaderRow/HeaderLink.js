@@ -1,25 +1,15 @@
-import React from 'react'
-const HeaderLinkFunc = (props, i) => (
-  <li className='news-link-li' key={i}>
-    <a href={props.link}>{ props.title }</a>
-  </li>
-);
+import React from 'react';
+import { HEADER_LINK } from '../../types';
 
-class HeaderLink extends React.Component {
-  render() {
-    return (
-      <li className='news-link-li'>
-        <a href={`${this.props.link}`}>
-          { this.props.title }
-          { this.props.children }
-        </a>
-      </li>
-    )
-  }
+export default function HeaderLink ({ title='', children=null, link='' }) {
+  return (
+    <li className='news-link-li' key={title}>
+      <a href={link}>
+        { title }
+        { children }
+      </a>
+    </li>
+  );
 }
 
-HeaderLink.defaultProps = {
-  title:'',
-  link:'',
-}
-export {HeaderLink, HeaderLinkFunc}
+HeaderLink.prototypes = HEADER_LINK;

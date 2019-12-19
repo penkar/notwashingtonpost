@@ -35,9 +35,9 @@ class App extends React.Component {
   }
 
   render() {
-    let {actions, settingsReducer, newsStoryReducer, newsTaglineReducer} = this.props;
-    let {hash} = this.state;
-    let stories = this._relevantStories();
+    const {actions, settingsReducer, newsStoryReducer, newsTaglineReducer} = this.props;
+    const {hash} = this.state;
+    const stories = this._relevantStories();
 
     return (
       <div>
