@@ -1,5 +1,4 @@
 import React from 'react';
-import cn from 'classnames';
 import {StoryTeaser} from './StoryTeaser';
 
 const HomePageBody = (stories) => {
@@ -23,16 +22,18 @@ const HomePageBody = (stories) => {
       arr3.push(StoryTeaser(item, i));
     }
   });
+  const bodyClass = 'home-page-body';
+  const colClass = 'home-page-body-col';
 
   return (
-    <div className={cn('home-page-body')}>
-      <div className='home-page-body-col'>
+    <div className={bodyClass}>
+      <div className={colClass}>
         {arr1}
       </div>
-      <div className='home-page-body-col'>
+      <div className={colClass}>
         {arr2}
       </div>
-      <div className='home-page-body-col'>
+      <div className={colClass}>
         {arr3}
       </div>
     </div>

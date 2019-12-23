@@ -1,18 +1,20 @@
 import React from 'react'
 import cn from 'classnames'
 
-const StoryElement = ({style, type, text, array, sClass = ''}, i) => {
+const StoryElement = ({style, type, text, array, className = ''}) => {
   switch (type) {
     case 'title':
-      return <span key={i} className={cn('title-story-element', sClass)}>{text}</span>
+      return <span className={cn('title-story-element', className)}>{text}</span>
     case 'author':
-      return <span key={i} className={cn('author-story-element', sClass)}>{text}</span>
+      return <span className={cn('author-story-element', className)}>{text}</span>
     case 'list':
-      return (<ul key={i} className={cn('list-story-element', sClass)}>
-        {array.map((st, j)=>(<li key={j} className='list-item-story-element'>{st}</li>))}
-      </ul>);
+      return (
+        <ul className={cn('list-story-element', className)}>
+          {array.map((st, j)=>(<li key={j} className='list-item-story-element'>{st}</li>))}
+        </ul>
+      );
     default:
-      return <span key={i} className={cn('title-story-element', sClass)}>{text}</span>
+      return <span className={cn('title-story-element', className)}>{text}</span>
   }
 }
 
