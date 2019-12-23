@@ -13,9 +13,9 @@ export default function Content ({ className, sublinks, link, label, key }) {
         {label}
       </span>
       <span className='right-arrow'>
-        { sublinks.length && <Right style={{fontSize: '1.5em'}}/> }
+        { Boolean(sublinks.length) && <Right style={{fontSize: '1.5em'}}/> }
       </span>
-      { sublinks.length &&
+      { Boolean(sublinks.length) &&
         <div className={cn('subcontents-component thin-shadow')}>
           { sublinks.map((sub) => <SubContent {...sub} />) }
         </div>

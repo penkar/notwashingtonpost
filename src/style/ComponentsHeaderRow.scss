@@ -2,12 +2,13 @@
   position: fixed;
   top:0px;
   left:0px;
+  right: 0px;
 
-  min-height: 28px;
+  height: 60px;
+  box-sizing: border-box;
 
   color: white;
   background-color: black;
-  width: calc(100vw - 32px);
 
   display: flex;
   align-items: center;
