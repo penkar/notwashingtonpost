@@ -5,13 +5,13 @@ const MultiLink = [{
     key:'/',
   },
   secondary:[{
-      label:'US & World',
-      key:'usworld',
-      link:'/usworld',
-    },{
-      label:'Regional',
-      key:'regional',
-      link:'/usworld',
+    label:'US & World',
+    key:'usworld',
+    link:'/usworld',
+  },{
+    label:'Regional',
+    key:'regional',
+    link:'/usworld',
   }],
 }]
 
