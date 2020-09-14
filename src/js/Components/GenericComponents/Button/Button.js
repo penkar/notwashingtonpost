@@ -1,8 +1,9 @@
 import React from 'react';
+
 import { BUTTON_PROPS } from '../../../types';
 import cn from 'classnames';
 
-const Button = ({ action, className = '', full = false, label = '', link = '', title = '', type = 'primary' }) => {
+const Button = ({ action, className, full, label, link, title, type }) => {
   const buttonClass = cn('generic-button-component', className, type, full);
   return (
     <div
@@ -15,5 +16,13 @@ const Button = ({ action, className = '', full = false, label = '', link = '', t
 }
 
 Button.propTypes = BUTTON_PROPS;
+Button.defaultProps = {
+  className: "",
+  full: false,
+  label: "",
+  link: "",
+  title: "",
+  type: "primary",
+};
 
-export {Button};
+export default Button;

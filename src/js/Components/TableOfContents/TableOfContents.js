@@ -3,7 +3,7 @@ import { bool } from 'prop-types';
 import cn from 'classnames';
 
 import Content from './Content';
-import { MultiContent } from './MultiContent';
+import MultiContent from './MultiContent';
 import { Button } from '../GenericComponents';
 import { List, MultiLink, } from './SectionList.js';
 

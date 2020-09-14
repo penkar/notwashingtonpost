@@ -41,7 +41,7 @@ class App extends React.Component {
 
     return (
       <div>
-        { HeaderRow({actions, settings: settingsReducer}) }
+        <HeaderRow changeSettingBool={actions.changeSettingBool} searchSection={settingsReducer.searchSection} />
         { TableOfContents(settingsReducer.tableofcontents) }
         <div className={cn('app-body', {tableofcontents:settingsReducer.tableofcontents})}>
           <Slogan />

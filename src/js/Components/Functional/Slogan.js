@@ -1,10 +1,10 @@
 import React from 'react';
 import { string } from 'prop-types';
 
-const Months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+const Months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 const date = new Date();
 
-export const Slogan = ({title="Not the Washington Post"}) => (
+export const Slogan = ({title}) => (
   <div className='slogan-sectional' key='slogan-sectional'>
     <a href='#' className='slogan-text'>
       {title}
@@ -24,6 +24,5 @@ export const Slogan = ({title="Not the Washington Post"}) => (
   </div>
 );
 
-Slogan.propTypes = {
-  title: string,
-}
+Slogan.propTypes = { title: string };
+Slogan.defaultProps = { title: "Not the Washington Post" };

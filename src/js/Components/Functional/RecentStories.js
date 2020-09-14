@@ -1,7 +1,7 @@
 import React from 'react';
 import { RECENT_STORIES } from '../../types';
 
-const RecentStories = (array = []) => (
+const RecentStories = (array) => (
   <ul className='recent-sectional'>
     <li className='label' key='title'>In the News&nbsp;</li>
     { array.map((story, i) => (
@@ -13,4 +13,7 @@ const RecentStories = (array = []) => (
 );
 
 RecentStories.propTypes = RECENT_STORIES;
+RecentStories.defaultProps = {
+  array: []
+};
 export {RecentStories};

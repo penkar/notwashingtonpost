@@ -1,28 +1,26 @@
-import React from 'react'
-import HeaderButton from './HeaderButton'
-import HeaderLink from './HeaderLink'
-import Links from './Links'
+import React from "react";
+import PropTypes from "prop-types";
+import HeaderButton from "./HeaderButton";
+import HeaderLink from "./HeaderLink";
+import Links from "./Links";
 
-import Bell from 'react-icons/lib/fa/bell-o'
-import Search from 'react-icons/lib/fa/search'
-import Bars from 'react-icons/lib/fa/bars'
+import Bell from "react-icons/lib/fa/bell-o";
+import Search from "react-icons/lib/fa/search";
+import Bars from "react-icons/lib/fa/bars";
 
-const HeaderRow  = ({actions, settings}) => (
+const HeaderRow  = ({changeSettingBool, searchSection}) => (
   <div id='header-row'>
     <ul className='news-link-ul'>
 
       <HeaderButton
-        className={settings.searchSection ? 'search' : ''}
+        className={searchSection ? 'search' : ''}
         clickValue='searchSection'
-        onClick={actions.changeSettingBool}
+        onClick={changeSettingBool}
       >
         <Search className='standard-icon' />
       </HeaderButton>
 
-      <HeaderButton
-        clickValue='tableofcontents'
-        onClick={actions.changeSettingBool}
-      >
+      <HeaderButton clickValue='tableofcontents' onClick={changeSettingBool}>
         <span>Sections&nbsp;</span>
         <Bars className='standard-icon' />
       </HeaderButton>
@@ -35,6 +33,11 @@ const HeaderRow  = ({actions, settings}) => (
       </HeaderLink>
     </ul>
   </div>
-)
+);
 
-export default HeaderRow
+HeaderRow.propTypes = {
+  changeSettingBool: PropTypes.func,
+  searchSection: PropTypes.bool,
+};
+
+export default HeaderRow;

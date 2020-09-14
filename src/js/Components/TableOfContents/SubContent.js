@@ -10,4 +10,4 @@ export const SubContent = ({ label, link }) => (
 SubContent.propTypes = {
   label: string,
   link: string,
-}
+};
