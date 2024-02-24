@@ -1,16 +1,22 @@
-import React from 'react'
-import {render} from 'react-dom'
-import {App,} from './js/Container'
-require('./style/Central.scss')
+import React from "react";
+import { render } from "react-dom";
+import { Provider } from "react-redux";
+import { createStore } from "redux";
+import reducer from "./js/Reducers";
+import { App } from "./js/Container";
+require("./style/app.css");
 
-
-import { Provider } from 'react-redux'
-import { createStore } from 'redux'
-import reducer from './js/Reducers'
-
-const store = createStore(reducer)
-
+const store = createStore(reducer);
+const container = document.getElementById("app");
 render(
   <Provider store={store}>
     <App />
-  </Provider>, document.getElementById('app'));
+  </Provider>,
+
+  container
+);
+
+// render(
+// <App tab="home" />
+//   document.getElementById("app")
+// );
