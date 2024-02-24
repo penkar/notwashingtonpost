@@ -30,7 +30,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      hash: window.location.hash.replace(/^\#/, ""),
+      hash: window.location.hash.replace(/^#/, ""),
     };
   }
 
@@ -79,10 +79,11 @@ class App extends React.Component {
     if (!hash) {
       return newsStoryReducer;
     } else if (parseInt(hash)) {
-      return newsStoryReducer.filter((str) => str.id == hash);
+      return newsStoryReducer.filter((str) => str.id.toString() === hash);
     } else if (hash) {
       return newsStoryReducer.filter(
-        (str) => str.section == hash || str.subSection == hash
+        (str) =>
+          str.section.toString() === hash || str.subSection.toString() === hash
       );
     }
     return [];
