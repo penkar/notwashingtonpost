@@ -1,4 +1,4 @@
-import Sample from './Sample'
+import Sample from "./Sample";
 
 export const getStories = (actions) => {
   actions.setStoryTags(Sample);
@@ -8,4 +8,4 @@ export const getStories = (actions) => {
   //   .then(response=> {
   //     console.log(resonse);
   //   })
-}
+};

@@ -1,2 +1,2 @@
-export * from './newsActions'
-export * from './settingsActions'
+export * from "./newsActions";
+export * from "./settingsActions";

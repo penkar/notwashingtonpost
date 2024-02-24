@@ -1,10 +1,10 @@
-import {CHANGE_SETTING, CHANGE_SETTING_BOOL, } from '../Constants'
+import { CHANGE_SETTING, CHANGE_SETTING_BOOL } from "../Constants";
 
 const initial = {
   tableofcontents: false,
-  searchSection:false,
-  searchString:'',
-}
+  searchSection: false,
+  searchString: "",
+};
 
 const settingsReducer = (state = initial, action) => {
   switch (action.type) {
@@ -17,5 +17,5 @@ const settingsReducer = (state = initial, action) => {
     default:
       return state;
   }
-}
-export default settingsReducer
+};
+export default settingsReducer;

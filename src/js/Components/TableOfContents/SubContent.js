@@ -1,5 +1,5 @@
-import React from 'react';
-import { string } from 'prop-types';
+import React from "react";
+import { string } from "prop-types";
 
 export const SubContent = ({ label, link }) => (
   <div className="subcontent-component">

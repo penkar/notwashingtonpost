@@ -1,11 +1,4 @@
-import {
-  arrayOf,
-  bool,
-  func,
-  shape,
-  string,
-  node,
-} from 'prop-types';
+import { arrayOf, bool, func, shape, string, node } from "prop-types";
 
 export const BUTTON_PROPS = {
   action: func,
@@ -15,7 +8,7 @@ export const BUTTON_PROPS = {
   link: string,
   title: string,
   type: string,
-}
+};
 
 export const HEADER_BUTTON_PROPS = {
   title: string,
@@ -23,13 +16,13 @@ export const HEADER_BUTTON_PROPS = {
   className: string,
   clickValue: string,
   onClick: func,
-}
+};
 
 export const HEADER_LINK = {
   href: string.isRequired,
   title: string.isRequired,
   children: node,
-}
+};
 
 export const HEADER_RECENT_STORY = shape({
   title: string,
